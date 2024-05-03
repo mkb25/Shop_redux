@@ -1,0 +1,55 @@
+.card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, 40%);
+    grid-template-rows: repeat(auto,90%);
+    gap: 0.5%;
+  }
+  
+  .column {
+    background-color: rgb(255, 255, 255);
+  
+    img {
+      width: 90%;
+      height: 60%;
+      object-fit: contain;
+      margin:2%;
+    }
+    .prod_price {
+       width:100%;
+      height: 19%;
+      padding-top: 5%;
+      padding-bottom: 2%;
+     p{
+        // font-size: 1.5em;
+        font-weight: bold;
+     }
+    }
+
+  }
+  .view_btn{
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+    height: 50px;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  

@@ -1,0 +1,39 @@
+*{
+    margin:0;
+}
+.navbar{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    height: 50px;
+    margin-left: auto;
+    justify-content: space-between;
+}
+.nav_list{
+  list-style-type: none;
+  margin-top: 0.5%;
+
+/* padding: 200; */
+}
+.nav_list li{
+    display: inline;
+}
+.nav_list a{
+    text-decoration: none;
+    color: white;
+    padding-right: 10px;
+    font-size: 190%;
+}
+.right_nav{
+    float: right;
+  padding-right: 0.4%;
+}
+span{
+    font-size:smaller;
+    vertical-align: super;
+    background-color: rgb(92, 85, 85);
+    color: white;
+    padding: 0px 5px;
+    text-align: center;
+    border-radius: 5px;
+}
