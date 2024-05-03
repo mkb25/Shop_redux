@@ -1,3 +1,12 @@
+<h4>Home Page</h4>
+<img src="Home.png">
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
