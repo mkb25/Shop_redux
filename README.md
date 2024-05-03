@@ -5,7 +5,12 @@
 <img src="Product_landing.png">
 <br>
 <h4>Empty Cart</h4>
-<img src="Empty_cart.png"><br>
+<img src="Empty_cart.png">
+<img src="cart.png">
+<img src="Cart1.png">
+<img src="cart2.png">
+<img src="cart3.png">
+<br>
 <h4>Cart</h4>
 <img src="cart.png">
 # React + Vite
