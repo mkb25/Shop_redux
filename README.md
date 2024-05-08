@@ -1,3 +1,20 @@
+<p> Not fully implemented still some caveats are there to cover..</p>
+<hr>
+<h4>Home Page</h4>
+<img src="Home.png">
+<br>
+<h4>Product Landing Page</h4>
+<img src="Product_landing.png">
+<br>
+<h4>Empty Cart</h4>
+<img src="Empty_cart.png">
+<img src="cart.png">
+<img src="Cart1.png">
+<img src="cart2.png">
+<img src="cart3.png">
+<br>
+<h4>Cart</h4>
+<img src="cart.png">
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
