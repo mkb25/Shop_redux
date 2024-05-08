@@ -5,7 +5,7 @@ export default function Home() {
   const [sort, setSort] = useState("none");
   const handleChange = (e) => {
     setSort(e.target.value);
-    console.log(sort)
+    console.log(sort);
   };
   return (
     <>
@@ -19,7 +19,7 @@ export default function Home() {
           </select>
         </div>
         <div className="home_item2">
-          <Products sort={sort}/>
+          <Products sort={sort} />
         </div>
       </div>
     </>

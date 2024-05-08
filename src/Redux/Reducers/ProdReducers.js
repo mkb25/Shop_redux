@@ -7,7 +7,6 @@ const initialState = {
 };
 
 const ProdReducer = (state = initialState, action) => {
- 
   switch (action.type) {
     case ActionTypes.add_prod:
       const exists = state.cart.find((prod) => prod.id === action.payload.id);
@@ -25,7 +24,10 @@ const ProdReducer = (state = initialState, action) => {
       } else {
         return {
           ...state,
-          cart: [...state.cart, { ...action.payload, quant: 1, Sum: action.payload.price }],
+          cart: [
+            ...state.cart,
+            { ...action.payload, quant: 1, Sum: action.payload.price },
+          ],
           quant: state.quant + 1,
           TotalSum: state.TotalSum + action.payload.price,
         };
@@ -42,7 +44,11 @@ const ProdReducer = (state = initialState, action) => {
         ...state,
         cart: state.cart.map((prod) =>
           prod.id === action.payload.id
-            ? { ...prod, quant: prod.quant + 1, Sum: prod.Sum + action.payload.price }
+            ? {
+                ...prod,
+                quant: prod.quant + 1,
+                Sum: prod.Sum + action.payload.price,
+              }
             : prod
         ),
         quant: state.quant + 1,
@@ -58,12 +64,18 @@ const ProdReducer = (state = initialState, action) => {
               // Call remove_prod if quantity reaches 0
               return {
                 ...state,
-        cart: state.cart.filter((prod) => prod.id !== action.payload.id),
-        quant: state.quant - action.payload.quant,
-        TotalSum: state.TotalSum - action.payload.Sum,
-              }
+                cart: state.cart.filter(
+                  (prod) => prod.id !== action.payload.id
+                ),
+                quant: state.quant - action.payload.quant,
+                TotalSum: state.TotalSum - action.payload.Sum,
+              };
             } else {
-              return { ...prod, quant: newQuant, Sum: prod.Sum - action.payload.price };
+              return {
+                ...prod,
+                quant: newQuant,
+                Sum: prod.Sum - action.payload.price,
+              };
             }
           } else {
             return prod;
@@ -71,7 +83,10 @@ const ProdReducer = (state = initialState, action) => {
         }),
         // Update quant and TotalSum only if the quantity wasn't reduced to 0 (handled in the map)
         quant: state.quant > 0 ? state.quant - 1 : state.quant,
-        TotalSum: state.TotalSum > 0 ? state.TotalSum - action.payload.price : state.TotalSum,
+        TotalSum:
+          state.TotalSum > 0
+            ? state.TotalSum - action.payload.price
+            : state.TotalSum,
       };
     default:
       return state;

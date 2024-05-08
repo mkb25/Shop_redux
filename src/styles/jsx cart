@@ -1,0 +1,44 @@
+ <div className="grid_container1" key={product.id}>
+              <div className="gridImg">
+                {product?.image && <img src={product.image} alt="product" />}
+              </div>
+              <div className="gridDesc">
+                <p>{product.title}</p>
+                {product?.Sum && <p> ₹ {product.Sum.toFixed(3)}</p>}
+                <button
+                  onClick={() => {
+                    dispatch(IncQuant(product));
+                  }}
+                >
+                  +
+                </button>{" "}
+                {product.quant}
+                {
+                  product.quant > 1 ? (
+                    <button
+                      onClick={() => {
+                        dispatch(DecQuant(product));
+                      }}
+                    >
+                      -
+                    </button>
+                  ) : (
+                    <button
+                      onClick={() => {
+                        dispatch(RemoveProd(product));
+                      }}
+                    >
+                      -
+                    </button>
+                  )
+                }
+                <br />
+                <button
+                  onClick={() => {
+                    dispatch(RemoveProd(product));
+                  }}
+                >
+                  Remove
+                </button>
+              </div>
+            </div>

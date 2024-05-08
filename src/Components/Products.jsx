@@ -33,13 +33,15 @@ export default function Products(props) {
 
   return (
     <>
+    {products.length === 0 && <center><h1>Loading...</h1></center>}
+    <div>
       <div className="row">
-        {products.map((product) => (
+        {products?.map((product) => (
           <div className="column" key={product.id}>
-            <img src={product.image} alt={product.title} />
+            <img src={product?.image} alt={product?.title} />
             <div className="prod_price">
-            <p>{product.title}</p>
-            <p>₹  {product.price}</p>
+            <h4>{product?.title}</h4>
+            <p>₹  {product?.price}</p>
             </div>
            
             <button className="view_btn"
@@ -51,6 +53,7 @@ export default function Products(props) {
             </button>
           </div>
         ))}
+      </div>
       </div>
     </>
   );
